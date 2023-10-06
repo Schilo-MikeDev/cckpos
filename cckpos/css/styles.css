@@ -1,0 +1,113 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+a, ul, li, p{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 5%;
+    background-color: rgb(5, 26, 66);
+    color: white;
+    border-bottom: 1px solid rgb(5, 26, 66);
+    box-shadow: 0 0 5px black;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    overflow-y: hidden;
+}
+#logo{
+    width: 200px;
+}
+/* body{background-color: red;} */
+#sidebar,
+#accessibility{
+    padding: 0 5%;
+    background-color: white;
+    height: calc(100vh - 75px);
+    margin-top: 50px;
+    position: sticky;
+    top: 50px;
+}
+#sidebar{
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    width: 20%;
+}
+#main{
+    width: 55%;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+#main .input-box{
+    width: 50%;
+    position: relative;
+}
+#main .input-box #search_product{
+    width: 100%;
+    padding: 10px 5px 10px 35px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    position: relative;
+}
+.ri-search-2-line{
+    position: absolute;
+    z-index: 1;
+    top: 11px;
+    left: 20px;
+}
+#main .input-box span{
+    position: absolute;
+    top: 2px;
+    left: 35px;
+    padding: 10px;
+    text-transform: uppercase;
+    pointer-events: none;
+    font-size: .9rem;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+}
+#main .input-box #search_product:valid ~ span,
+#main .input-box #search_product:focus ~ span{
+    color: #fff;
+    transform: translateX(-10px) translateY(-10px);
+    font-size: .7rem;
+    padding: 0 10px;
+    background-color: rgb(5, 26, 66);
+    border-left: 1px solid rgb(5, 26, 66);
+    border-right: 1px solid rgb(5, 26, 66);
+    word-spacing: 0.5rem;
+}
+#category{
+    margin-top: 5px;
+}
+#accessibility{
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    width: 25%;
+}
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    /* background-color: white; */
+    color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 30px;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
